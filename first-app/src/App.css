@@ -1,14 +1,51 @@
 .box {
   border: 1px solid black;
-  width: 500px;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .item-img {
-  width: 400px;
+  width: 100%;
+  height: 50%;
+}
+
+h2 {
+  text-align: center;
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.win {
+  border: 10px solid green;
+  color: green;
+}
+
+.lose {
+  border: 10px solid red;
+  color: red;
+}
+
+.tie {
+  border: 10px solid black;
+  color: black;
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: rgb(167, 165, 165);
 }
