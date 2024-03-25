@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Diphylleia-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.nav-section {
+  font-family: "Diphylleia-Regular";
+  font-size: 60px;
+  color: pink;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-list li {
+  padding: 40px;
+}
+
+.menu-area {
+  display: flex;
+  justify-content: center;
+}
