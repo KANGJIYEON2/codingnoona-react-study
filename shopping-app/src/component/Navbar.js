@@ -18,10 +18,10 @@ const Navbar = () => {
             <li>{menu}</li>
           ))}
         </ul>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={faSearch} />
-        <input type="text" />
+        <div className="search-bar">
+          <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          <input className="search-text" type="text" placeholder="검색하기" />
+        </div>
       </div>
     </div>
   );

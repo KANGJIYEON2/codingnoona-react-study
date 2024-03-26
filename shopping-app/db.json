@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "img": "https://cdn.pixabay.com/photo/2019/12/18/15/52/diamond-4704260_1280.png",
+      "title": "레본 다이아몬드 링",
+      "price": 100000000,
+      "choice": true,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": 1,
+      "img": "https://cdn.pixabay.com/photo/2020/05/28/16/17/diamond-5231681_1280.png",
+      "title": "진 다이아몬드 링",
+      "price": 100000000,
+      "choice": true,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.pixabay.com/photo/2020/09/18/07/09/accessory-5581031_1280.png",
+      "title": "진 다이아몬드 링",
+      "price": 600000000,
+      "choice": true,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": 3,
+      "img": "https://cdn.pixabay.com/photo/2022/03/13/07/34/diamond-7065479_1280.png",
+      "title": "퀸 다이아몬드 링",
+      "price": 1600000000,
+      "choice": true,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": 4,
+      "img": "https://cdn.pixabay.com/photo/2019/12/18/13/54/pendant-4704049_1280.png",
+      "title": "십자가 다이아몬드 목걸이",
+      "price": 1600000000,
+      "choice": true,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": 5,
+      "img": "https://cdn.pixabay.com/photo/2019/12/18/13/50/pendant-4704041_1280.png",
+      "title": "하트 다이아몬드 목걸이",
+      "price": 1600000000,
+      "choice": false,
+      "new": true,
+      "color": ["S", "G"]
+    }
+  ]
+}

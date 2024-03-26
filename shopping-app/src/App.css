@@ -13,7 +13,7 @@
 .nav-section {
   font-family: "Diphylleia-Regular";
   font-size: 60px;
-  color: pink;
+  color: rgb(240, 208, 92);
   display: flex;
   justify-content: center;
 }
@@ -30,4 +30,10 @@
 .menu-area {
   display: flex;
   justify-content: center;
+}
+
+.search-text {
+  border: none;
+  padding: 10px;
+  width: 200px;
 }
