@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 0,
+      "id": "0",
       "img": "https://cdn.pixabay.com/photo/2019/12/18/15/52/diamond-4704260_1280.png",
       "title": "레본 다이아몬드 링",
       "price": 100000000,
@@ -10,7 +10,7 @@
       "color": ["S", "G"]
     },
     {
-      "id": 1,
+      "id": "1",
       "img": "https://cdn.pixabay.com/photo/2020/05/28/16/17/diamond-5231681_1280.png",
       "title": "진 다이아몬드 링",
       "price": 100000000,
@@ -19,7 +19,7 @@
       "color": ["S", "G"]
     },
     {
-      "id": 2,
+      "id": "2",
       "img": "https://cdn.pixabay.com/photo/2020/09/18/07/09/accessory-5581031_1280.png",
       "title": "진 다이아몬드 링",
       "price": 600000000,
@@ -28,7 +28,7 @@
       "color": ["S", "G"]
     },
     {
-      "id": 3,
+      "id": "3",
       "img": "https://cdn.pixabay.com/photo/2022/03/13/07/34/diamond-7065479_1280.png",
       "title": "퀸 다이아몬드 링",
       "price": 1600000000,
@@ -37,7 +37,7 @@
       "color": ["S", "G"]
     },
     {
-      "id": 4,
+      "id": "4",
       "img": "https://cdn.pixabay.com/photo/2019/12/18/13/54/pendant-4704049_1280.png",
       "title": "십자가 다이아몬드 목걸이",
       "price": 1600000000,
@@ -46,13 +46,59 @@
       "color": ["S", "G"]
     },
     {
-      "id": 5,
+      "id": "5",
       "img": "https://cdn.pixabay.com/photo/2019/12/18/13/50/pendant-4704041_1280.png",
       "title": "하트 다이아몬드 목걸이",
       "price": 1600000000,
       "choice": false,
       "new": true,
       "color": ["S", "G"]
+    },
+    {
+      "id": "6",
+      "img": "https://cdn.pixabay.com/photo/2018/12/04/08/52/pendant-3855108_1280.png",
+      "title": "유비 목걸이",
+      "price": 16500000,
+      "choice": false,
+      "new": true,
+      "color": ["S", "G"]
+    },
+    {
+      "id": "7",
+      "img": "https://cdn.pixabay.com/photo/2016/11/11/17/42/jade-1817312_1280.png",
+      "title": "오팔 목걸이",
+      "price": 1600030000,
+      "choice": false,
+      "new": false,
+      "color": ["S", "G"]
+    },
+    {
+      "id": "8",
+      "img": "https://cdn.pixabay.com/photo/2016/11/11/17/34/diamond-1817291_1280.png",
+      "title": "포레스트 팔찌",
+      "price": 150000000,
+      "choice": false,
+      "new": false,
+      "color": ["G"]
+    },
+
+    {
+      "id": "9",
+      "img": "https://cdn.pixabay.com/photo/2015/11/18/17/52/heart-1049645_1280.jpg",
+      "title": "하트 미니목걸이",
+      "price": 160000,
+      "choice": false,
+      "new": false,
+      "color": ["S", "G"]
+    },
+    {
+      "id": "10",
+      "img": "https://cdn.pixabay.com/photo/2020/06/28/12/52/amethyst-5349208_1280.jpg",
+      "title": "퍼플 이어링",
+      "price": 1000000,
+      "choice": false,
+      "new": true,
+      "color": ["P", "Y"]
     }
   ]
 }

@@ -9,6 +9,7 @@
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 .nav-section {
   font-family: "Diphylleia-Regular";
@@ -36,4 +37,29 @@
   border: none;
   padding: 10px;
   width: 200px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  margin: 30px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-img-detail {
+  width: 500px;
 }
