@@ -24,12 +24,14 @@ const ProductDetail = () => {
 
   return (
     <Container className="product-detail">
-      <Row>
-        <Col className="product-img">
+      <Row className="product-img">
+        <Col>
           <img className="product-img-detail" src={product?.img} alt="" />
         </Col>
         <Col>
-          <div>{product?.title}</div>
+          <div>
+            <h3>{product?.title}</h3>
+          </div>
           <div>{product?.price}원</div>
           <Form>
             {["radio"].map((type) => (
@@ -51,11 +53,15 @@ const ProductDetail = () => {
               </div>
             ))}
           </Form>
-          <FontAwesomeIcon icon={faShoppingCart} />
+          <FontAwesomeIcon icon={faShoppingCart} className="shoping-cart" />
         </Col>
-        <Col>
-          <Button variant="secondary">추가하기</Button>{" "}
-        </Col>
+        <Row>
+          <div className="d-grid gap-2">
+            <Button variant="secondary" size="lg">
+              구매하기
+            </Button>
+          </div>
+        </Row>
       </Row>
     </Container>
   );

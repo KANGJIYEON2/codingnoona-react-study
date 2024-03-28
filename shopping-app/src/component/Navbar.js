@@ -9,8 +9,11 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const goToLogin = () => {
+  const goToLogin = ({}) => {
     navigate("/login");
+  };
+  const goToHome = () => {
+    navigate("/");
   };
 
   const search = (event) => {
@@ -25,7 +28,9 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faUser} />
         <div>Login</div>
       </div>
-      <div className="nav-section">Jewelry Shop</div>
+      <div className="nav-section" onClick={goToHome}>
+        <h3> Jewelry Shop</h3>
+      </div>
       <div className="menu-area">
         <ul className="menu-list">
           {menuList.map((menu) => (
