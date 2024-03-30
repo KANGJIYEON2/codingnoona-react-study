@@ -123,7 +123,7 @@
     margin: 5px 0;
   }
   .product-all-list {
-    margin: 60px;
+    margin: 30px;
   }
 }
 
@@ -168,8 +168,8 @@
 }
 
 .product-img-detail {
-  max-width: 500px;
-  min-width: 290px;
+  max-width: 300px;
+  min-width: 200px;
   overflow: hidden;
   margin: 30px;
 }
