@@ -1,0 +1,12 @@
+* {
+  background-color: rgb(169, 152, 184);
+}
+div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  padding: 10px;
+  font-size: 20px;
+}
