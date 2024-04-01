@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { useDispatch, useSelector } from "react-redux";
+import { Form, Button, Row, Col } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+
 const SearchBox = () => {
   let [keyword, setKeyword] = useState("");
   let dispatch = useDispatch();
@@ -21,7 +20,9 @@ const SearchBox = () => {
             onChange={(event) => setKeyword(event.target.value)}
           />
         </Col>
-        <Button type="submit">검색하기</Button>
+        <Col>
+          <Button type="submit">Search</Button>
+        </Col>
       </Row>
     </Form>
   );

@@ -13,7 +13,7 @@ const ContactItem = ({ item }) => {
       </Col>
       <Col lg={10}>
         <div>{item.name}</div>
-        <div>{item.phoneNum}</div>
+        <div>{item.phoneNumber}</div>
       </Col>
     </Row>
   );

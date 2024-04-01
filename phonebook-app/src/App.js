@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <h1 className="title">연락처</h1>
-      <Container>
+      <Container className="contact_form">
         <Row>
           <Col>
             <ConteactForm />
