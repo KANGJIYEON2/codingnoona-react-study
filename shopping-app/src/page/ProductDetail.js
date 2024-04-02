@@ -5,18 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { productAction } from "../redux/actions/productAction";
+import { useSelector, useDispatch } from "react-redux";
 
 const ProductDetail = () => {
   let { id } = useParams();
-  const [product, setProduct] = useState(null);
-
+  const product = useSelector((state) => state.product.selectedItem);
+  const dispatch = useDispatch();
   const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/KANGJIYEON2/database/products/${id}`;
-
-    let res = await fetch(url);
-    let data = await res.json();
-    console.log(data);
-    setProduct(data);
+    dispatch(productAction.getProductDetail(id));
   };
   useEffect(() => {
     getProductDetail();

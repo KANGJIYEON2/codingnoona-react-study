@@ -17,28 +17,13 @@ import PrivateRoute from "./route/PrivateRoute";
 //7. 상품검색기능
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false);
-  const useAuthentication = () => {
-    setAuthenticate(!authenticate);
-  };
-
-  useEffect(() => {}, [authenticate]);
   return (
     <div>
-      <Navbar
-        authenticate={authenticate}
-        useAuthentication={useAuthentication}
-      />
+      <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route
-          path="/login"
-          element={<Login setAuthenticate={setAuthenticate} />}
-        />
-        <Route
-          path="/product/:id"
-          element={<PrivateRoute authenticate={authenticate} />}
-        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<PrivateRoute />} />
       </Routes>
     </div>
   );
