@@ -7,13 +7,13 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { productAction } from "../redux/actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
-
+import { fetchProductsDetail } from "../redux/reducers/productSlice";
 const ProductDetail = () => {
   let { id } = useParams();
   const product = useSelector((state) => state.product.selectedItem);
   const dispatch = useDispatch();
   const getProductDetail = async () => {
-    dispatch(productAction.getProductDetail(id));
+    dispatch(fetchProductsDetail(id));
   };
   useEffect(() => {
     getProductDetail();

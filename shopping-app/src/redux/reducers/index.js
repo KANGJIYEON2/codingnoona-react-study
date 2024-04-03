@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import productReducer from "./productReducer";
+import productReducer from "./productSlice";
 import authenticateReducer from "./authenticateReducer";
 
 export default combineReducers({
