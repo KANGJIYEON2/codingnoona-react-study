@@ -1,0 +1,15 @@
+.netflix-logo {
+  font-size: 2rem;
+  color: #e50914;
+  position: relative;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  background-color: rgb(74, 75, 78);
+}
+
+.content-body {
+  background-color: black;
+  height: 100vh;
+}
