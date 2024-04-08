@@ -1,13 +1,12 @@
 .banner {
   height: 56vh;
   background-size: cover;
-  background-position: left;
   background-repeat: no-repeat;
 }
 
 .banner::before {
   content: "";
-  background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to top, rgb(225, 219, 177), transparent);
   position: absolute;
   left: 0;
   height: 56vh;
@@ -15,7 +14,7 @@
 }
 
 .banner-text-area {
-  width: 36%;
+  width: 56%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,4 +24,28 @@
 
 .banner-text-area > * {
   z-index: 2;
+}
+@media (max-width: 998px) {
+  .banner {
+    height: 56vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner::before {
+    background: linear-gradient(to top, rgb(225, 219, 177, 0.8), transparent);
+  }
+
+  .banner-text-area {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .banner-text-area h1 {
+    font-size: 24px;
+  }
+
+  .banner-text-area p {
+    font-size: 16px;
+  }
 }

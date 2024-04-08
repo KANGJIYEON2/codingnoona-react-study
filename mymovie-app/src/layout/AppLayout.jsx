@@ -9,10 +9,10 @@ import "./App.Layout.style.css";
 const AppLayout = () => {
   return (
     <div className="nav-bar">
-      <Navbar expand="lg" className="bg-black">
+      <Navbar expand="lg" className="bg-light">
         <Container fluid>
           <Navbar.Brand href="#">
-            <span className="netflix-logo">NETFLIX</span>
+            <span className="netflix-logo">POP!CORN</span>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarScroll"
@@ -24,10 +24,10 @@ const AppLayout = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="/" className="text-white">
+              <Nav.Link href="/" className="">
                 Home
               </Nav.Link>
-              <Nav.Link href="/movies" className="text-white">
+              <Nav.Link href="/movies" className="">
                 Movies
               </Nav.Link>
             </Nav>
@@ -38,7 +38,7 @@ const AppLayout = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-danger">Search</Button>
+              <Button variant="outline-warning">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

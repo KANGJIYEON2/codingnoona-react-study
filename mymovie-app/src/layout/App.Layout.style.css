@@ -1,16 +1,30 @@
+@font-face {
+  font-family: "KCC-Hanbit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --frist-color: rgb(234, 234, 85);
+}
+
+.nav-bar {
+  font-family: "KCC-Hanbit";
+}
 .netflix-logo {
-  font-size: 2rem;
-  color: #e50914;
+  font-family: "KCC-Hanbit";
+  font-size: 2.3rem;
+  color: var(--frist-color);
   position: relative;
   font-weight: bold;
 }
-
-.navbar-toggle {
-  background-color: rgb(74, 75, 78);
+#navbarScroll {
+  font-size: large;
+  padding-left: 10px;
 }
 
 .content-body {
-  background-color: black;
-  height: 100vh;
-  color: white;
+  color: var(--frist-color);
+  font-family: "KCC-Hanbit";
 }
