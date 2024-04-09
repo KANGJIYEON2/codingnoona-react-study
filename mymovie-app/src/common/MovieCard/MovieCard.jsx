@@ -3,9 +3,20 @@ import { Badge } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import "./MovieCard.style.css";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
-
+import Spinner from "react-bootstrap/Spinner";
+import Alert from "react-bootstrap/Alert";
 const MovieCard = ({ movie }) => {
-  const { data: genreData } = useMovieGenreQuery();
+  const { data: genreData, isLoading, isError, error } = useMovieGenreQuery();
+  if (isLoading) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    );
+  }
+  if (isError) {
+    return <Alert variant="danger">{error.message} </Alert>;
+  }
   const showGenre = (genreIdList) => {
     if (!genreIdList) return [];
     const genreNameList = genreIdList.map((id) => {
