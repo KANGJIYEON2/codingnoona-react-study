@@ -1,13 +1,12 @@
 import React from "react";
-import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
+import { useUpcomingMoviesQuery } from "../../../../hooks/useUpcomingMovie";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 import "react-multi-carousel/lib/styles.css";
-import "./PopularMovieSlice.style.css";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
-const PopularMovieSlice = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+const UpcomingMovieSlice = () => {
+  const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
   if (isLoading) {
     return (
       <Spinner animation="border" role="status">
@@ -21,7 +20,7 @@ const PopularMovieSlice = () => {
   return (
     <div>
       <MovieSlider
-        title="Popular Movies"
+        title="Upcoming Movies"
         movies={data.results}
         responsive={responsive}
       />
@@ -29,4 +28,4 @@ const PopularMovieSlice = () => {
   );
 };
 
-export default PopularMovieSlice;
+export default UpcomingMovieSlice;
