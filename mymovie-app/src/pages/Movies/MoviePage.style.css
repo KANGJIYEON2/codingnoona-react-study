@@ -1,0 +1,51 @@
+.pagination {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  > * {
+    cursor: pointer;
+  }
+}
+
+.page-link {
+  transition: all 0.25s;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #bbbbbb;
+  color: #fefefe;
+}
+.sort-items {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#dropdown-item-button {
+  margin-left: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: #f3d47a;
+  color: #ffffff;
+  border: none;
+}
+
+#dropdown-item-button:hover,
+#dropdown-item-button:focus {
+  background-color: #e0a800;
+}
+
+.dropdown-item {
+  color: #212529;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #ffc107;
+  color: #ffffff;
+}

@@ -7,6 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 const MovieCard = ({ movie }) => {
   const { data: genreData, isLoading, isError, error } = useMovieGenreQuery();
+  console.log(genreData);
   if (isLoading) {
     return (
       <Spinner animation="border" role="status">
