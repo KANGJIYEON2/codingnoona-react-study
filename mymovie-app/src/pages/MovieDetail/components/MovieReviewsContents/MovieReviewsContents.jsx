@@ -7,6 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 import { useMovieReviewsQuery } from "../../../../hooks/useReviewMovies";
 import { Button } from "react-bootstrap";
+import "./MovieReviewsContents.style.css";
 const MovieReviewsContents = () => {
   const [query, setQuery] = useSearchParams();
   const [showAllReviews, setShowAllReviews] = useState(false);
@@ -29,15 +30,15 @@ const MovieReviewsContents = () => {
     return <Alert variant="danger">{error.message} </Alert>;
   }
   return (
-    <Container>
+    <Container className="review-container">
       <h3>리뷰보기</h3>
       <Col>
         {data.results.length > 0 ? (
           data.results
             .slice(0, showAllReviews ? data.results.length : 3)
             .map((review) => (
-              <div key={review.id}>
-                <h4>{review.author}</h4>
+              <div key={review.id} className="review-box">
+                <h5>{review.author}</h5>
                 <p>{review.content}</p>
               </div>
             ))
@@ -45,12 +46,14 @@ const MovieReviewsContents = () => {
           <p>아직 리뷰가 없습니다.</p>
         )}
         {data.results.length > 3 && (
-          <Button
-            variant="warning"
-            onClick={() => setShowAllReviews(!showAllReviews)}
-          >
-            {showAllReviews ? "접기" : "더보기"}
-          </Button>
+          <div className="review-button">
+            <Button
+              variant="warning"
+              onClick={() => setShowAllReviews(!showAllReviews)}
+            >
+              {showAllReviews ? "접기" : "더보기"}
+            </Button>
+          </div>
         )}
       </Col>
     </Container>

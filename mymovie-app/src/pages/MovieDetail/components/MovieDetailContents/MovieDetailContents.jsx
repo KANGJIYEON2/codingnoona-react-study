@@ -31,7 +31,7 @@ const MovieDetailContents = () => {
     detailId,
   });
   const opts = {
-    height: "100%",
+    height: "700",
     width: "100%",
     playerVars: {
       autoplay: 1,
@@ -50,8 +50,14 @@ const MovieDetailContents = () => {
   }
   return (
     <Container className="movie-box">
-      <Row className="main-title">
-        <h2>팝!터지는 무비 맛보고 가세요</h2>
+      <Row>
+        <div className="main-title">
+          팝!터지는 무비 맛보고 가세요
+          <img
+            src="https://cdn.pixabay.com/photo/2016/03/31/18/36/cinema-1294496_1280.png"
+            alt=""
+          />
+        </div>
       </Row>
       <Row className="movie-contents">
         <Col xs={12} md={6}>
@@ -69,7 +75,7 @@ const MovieDetailContents = () => {
               </Badge>
             ))}
           </div>
-          <h3>{data?.title}</h3>
+          <h2>{data?.title}</h2>
           <div className="overview-list">
             <h4> {data?.tagline}</h4>
             <h6>{data?.overview}</h6>
@@ -84,7 +90,7 @@ const MovieDetailContents = () => {
           </div>
           <div> 개봉일 : {data?.release_date}</div>
           <div>런타임: {data?.runtime}분</div>
-          <div>
+          <div className="movie-trailer">
             예고편보기
             <Button variant="warning" onClick={() => setShowModal(true)}>
               재생하기

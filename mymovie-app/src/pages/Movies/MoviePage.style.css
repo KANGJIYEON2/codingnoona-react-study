@@ -21,18 +21,32 @@
   margin-top: 20px;
   padding: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.sort-items button {
+  background-color: #7aa0c9;
+  color: #ffffff;
+  border: none;
+}
+
+.sort-items button:hover {
+  background-color: #6f95a0;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
 }
 
 #dropdown-item-button {
-  margin-left: 20px;
   width: 100%;
   text-align: center;
   background-color: #f3d47a;
   color: #ffffff;
   border: none;
+  padding: 10px;
 }
 
 #dropdown-item-button:hover,

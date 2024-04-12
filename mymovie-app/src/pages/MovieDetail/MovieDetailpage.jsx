@@ -7,8 +7,8 @@ import MovieRecomand from "./components/MovieRecomand/MovieRecomand";
 const MovieDetailpage = () => {
   return (
     <div>
-      <MovieDetailContents />;
-      <MovieReviewsContents />;
+      <MovieDetailContents />
+      <MovieReviewsContents />
       <MovieRecomand />
     </div>
   );

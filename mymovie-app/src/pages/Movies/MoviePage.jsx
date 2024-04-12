@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
@@ -12,9 +12,10 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
-  const [seletedGenre, setSelectedGenre] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState(null);
   const [filterMovies, setFilterMovies] = useState([]);
   const [selectedGenreName, setSelectedGenreName] = useState("장르 선택");
+  const [sortPopularity, setSortPopularity] = useState(null);
   const [page, setPage] = useState(1);
   const keyword = query.get("q");
 
@@ -22,34 +23,36 @@ const MoviePage = () => {
     keyword,
     page,
   });
-
   const {
     data: genreData,
     isLoading: isLoad,
     isError: isErrored,
     error: errored,
   } = useMovieGenreQuery();
-  useEffect(() => {
-    if (seletedGenre && data?.results) {
-      const newFilteredMovies = data?.results.filter((movie) =>
-        movie.genre_ids.includes(seletedGenre)
-      );
-      setFilterMovies(newFilteredMovies);
-    } else {
-      setFilterMovies(data?.results || []);
-    }
-  }, [seletedGenre, data]);
 
   useEffect(() => {
-    if (seletedGenre) {
-      const genre = genreData?.find((g) => g.id === seletedGenre);
-      setSelectedGenreName(genre ? genre.name : "장르 선택");
-    } else {
-      setSelectedGenreName("장르 선택");
+    let movies = data?.results || [];
+    if (selectedGenre) {
+      movies = movies.filter((movie) =>
+        movie.genre_ids.includes(selectedGenre)
+      );
     }
-  }, [seletedGenre, genreData]);
+    if (sortPopularity) {
+      movies.sort((a, b) =>
+        sortPopularity === "asc"
+          ? a.popularity - b.popularity
+          : b.popularity - a.popularity
+      );
+    }
+    setFilterMovies(movies);
+  }, [data, selectedGenre, sortPopularity]);
+
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
+  };
+
+  const toggleSortPopularity = (order) => {
+    setSortPopularity(order);
   };
 
   if (isLoading || isLoad) {
@@ -60,26 +63,41 @@ const MoviePage = () => {
     );
   }
   if (isError || isErrored) {
-    return <Alert variant="danger">{error.message || errored.message} </Alert>;
+    return <Alert variant="danger">{error.message || errored.message}</Alert>;
   }
+
   return (
     <Container>
       <Row>
         <Col lg={4} xs={12} className="sort-items">
-          <h3> 장르별 검색하기</h3>
           <DropdownButton id="dropdown-item-button" title={selectedGenreName}>
             {genreData?.map((genre) => (
               <Dropdown.Item
                 key={genre.id}
-                as="button"
-                onClick={() =>
-                  setSelectedGenre(genre.id) && setSelectedGenreName(genre.name)
-                }
+                onClick={() => setSelectedGenre(genre.id)}
               >
                 {genre.name}
               </Dropdown.Item>
             ))}
           </DropdownButton>
+          <Col>
+            <div className="pupluality-btn">
+              <Button
+                variant="secondary"
+                className="mt-3"
+                onClick={() => toggleSortPopularity("desc")}
+              >
+                인기도 높은 순
+              </Button>
+              <Button
+                variant="secondary"
+                className="mt-3"
+                onClick={() => toggleSortPopularity("asc")}
+              >
+                인기도 낮은 순
+              </Button>
+            </div>
+          </Col>
         </Col>
         <Col lg={8} xs={12}>
           <Row>
