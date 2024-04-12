@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Badge } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import "./MovieCard.style.css";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
+import { useNavigate } from "react-router-dom";
+
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
   const { data: genreData, isLoading, isError, error } = useMovieGenreQuery();
-  console.log(genreData);
+  const [detail, setDetail] = useState("");
   if (isLoading) {
     return (
       <Spinner animation="border" role="status">
@@ -26,8 +29,14 @@ const MovieCard = ({ movie }) => {
     });
     return genreNameList;
   };
+
+  const enteredDetailPage = (event) => {
+    event.preventDefault();
+    navigate(`/movies/movies?q=${movie.id}`);
+    setDetail("");
+  };
   return (
-    <Card className="movie-card">
+    <Card className="movie-card" onClick={enteredDetailPage}>
       <Card.Img
         variant="top"
         src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}

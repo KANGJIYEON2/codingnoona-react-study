@@ -22,7 +22,6 @@ const MoviePage = () => {
     keyword,
     page,
   });
-  console.log(data);
 
   const {
     data: genreData,
@@ -85,7 +84,7 @@ const MoviePage = () => {
         <Col lg={8} xs={12}>
           <Row>
             {filterMovies.map((movie, index) => (
-              <Col key={index} lg={4} xs={12}>
+              <Col key={index} lg={4} xs={6} sm={6} md={6}>
                 <MovieCard movie={movie} />
               </Col>
             ))}

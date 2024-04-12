@@ -49,3 +49,13 @@
   background-color: #ffc107;
   color: #ffffff;
 }
+
+@media (max-width: 1000px) {
+  .pagination .page-link {
+    padding: 0.1rem 0.25rem;
+    font-size: 1rem;
+  }
+  .pagination {
+    gap: 0.45rem;
+  }
+}
